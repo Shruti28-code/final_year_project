@@ -1,0 +1,44 @@
+{
+  "SEQUENCE_LENGTH": 24,
+  "LATENT_DIM": 32,
+  "LSTM_UNITS": 64,
+  "DROPOUT_RATE": 0.2,
+  "THRESHOLD_PERCENTILE": 95,
+  "LSTM_reconstruction_error_threshold": 0.45343964067105386,
+  "ALERT_PROBABILITY_THRESHOLD": 0.5,
+  "LSTM_FEATURE_COLS": [
+    "Voltage_V",
+    "Current_A",
+    "Apparent_Power_VA",
+    "Reactive_Power_VAR",
+    "Frequency_Hz",
+    "Energy_kWh",
+    "Power_Factor",
+    "Energy_change_rate",
+    "Night_indicator",
+    "Weekend_indicator"
+  ],
+  "XGB_FEATURE_COLS": [
+    "Voltage_V",
+    "Current_A",
+    "Apparent_Power_VA",
+    "Reactive_Power_VAR",
+    "Frequency_Hz",
+    "Energy_kWh",
+    "Power_Factor",
+    "Energy_change_rate",
+    "Night_indicator",
+    "Weekend_indicator",
+    "LSTM_Reconstruction_Error"
+  ],
+  "XGB_PARAMS": {
+    "n_estimators": 300,
+    "max_depth": 5,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "random_state": 42,
+    "eval_metric": "logloss"
+  },
+  "RANDOM_SEED": 42
+}
